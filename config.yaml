@@ -1,0 +1,8 @@
+# alarm 子项目配置（闹钟：到点往幻日自己终端注入提醒）
+# 本体 2026-09-01 拍板：闹钟不走 QQ，直接 tmux 注入幻日常驻终端，标注「闹钟提醒」。
+data_file: "alarms.json"         # 闹钟列表（运行时状态，gitignore，不入库）
+tmux_session: "huanri"           # 幻日常驻终端 session（注入到这）
+message_prefix: "[闹钟提醒]"      # 注入消息前缀（标注是闹钟）
+tick_interval_seconds: 2         # 轮询间隔（秒）
+min_interval_seconds: 60         # 频率护栏：interval 类型最小间隔（秒），别太频繁
+min_gap_seconds: 5               # 全局防抖：两条注入之间最短间隔（秒），防同刻多个闹钟连发
