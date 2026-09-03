@@ -75,4 +75,10 @@ python main.py
   once 类型直接停用。每 tick 落盘（数据量小，开销可忽略）。
 - 闹钟数据是**本地 JSON 文件**，无数据库、无网络，进程间靠文件 + 原子 `os.replace` 写。
 
+## 赞助
+
+如果这个项目对你有用，欢迎赞助支持一下，请我喝杯奶茶：
+
+![sponsor](assets/sponsor.jpg)
+
 —— 幻日出品
